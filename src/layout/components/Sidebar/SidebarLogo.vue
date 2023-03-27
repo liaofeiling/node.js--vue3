@@ -11,10 +11,13 @@ const props = defineProps({
   <div class="sidebar-logo-container" :class="{ collapse: props.collapse }">
     <transition name="sidebar-logo-fade">
       <router-link v-if="props.collapse" key="collapse" to="/">
-        <img src="@/assets/layout/logo.png" class="sidebar-logo" />
+        <img src="@/assets/layout/小表情02.png" class="sidebar-logo" />
       </router-link>
       <router-link v-else key="expand" to="/">
-        <img src="@/assets/layout/logo-text-1.png" class="sidebar-logo-text" />
+        <!-- <div style=""> -->
+        <img style="" src="@/assets/layout/小表情02.png" class="sidebar-logo" />
+        <!-- <img src="@/assets/layout/小黄花.jpg" class="sidebar-logo-text" /> -->
+        <!-- </div> -->
       </router-link>
     </transition>
   </div>
