@@ -4,7 +4,7 @@ import { useUserStore } from "@/store/modules/user"
 import AdminDashboard from "./admin/index.vue"
 import EditorDashboard from "./editor/index.vue"
 
-type CurrentRoleType = "admin" | "editor"
+type CurrentRoleType = "admin" | "editor" | string
 
 const userStore = useUserStore()
 const currentRole = ref<CurrentRoleType>("admin")
@@ -14,5 +14,6 @@ if (!userStore.roles.includes("admin")) {
 </script>
 
 <template>
-  <component :is="currentRole === 'admin' ? AdminDashboard : EditorDashboard" />
+  <!-- <div>1234</div> -->
+  <component :is="currentRole === 'editor' ? EditorDashboard : AdminDashboard" />
 </template>
